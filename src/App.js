@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import PageFooter from './common/page-footer'
+import PageHeader from './common/page-header'
+import FirebaseDemo from './pages/firebase-demo'
+// import firebase from './firebase'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="min-h-screen bg-gray-900 text-center">
+      <BrowserRouter>
+        <PageHeader />
+
+        <Switch>
+          <Route path="/firebase" exact>
+            <FirebaseDemo />
+          </Route>
+        </Switch>
+
+        <PageFooter />
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
