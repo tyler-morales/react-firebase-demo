@@ -1,0 +1,50 @@
+[
+  {
+    "month": "Jan",
+    "amount": 500
+  },
+  {
+    "month": "Feb",
+    "amount": 800
+  },
+  {
+    "month": "Mar",
+    "amount": 1000
+  },
+  {
+    "month": "Apr",
+    "amount": 900
+  },
+  {
+    "month": "May",
+    "amount": 1200
+  },
+  {
+    "month": "Jun",
+    "amount": 1700
+  },
+  {
+    "month": "Jul",
+    "amount": 2000
+  },
+  {
+    "month": "Aug",
+    "amount": 1400
+  },
+  {
+    "month": "Sep",
+    "amount": 1850
+  },
+  {
+    "month": "Oct",
+    "amount": 2200
+  },
+  {
+    "month": "Nov",
+    "amount": 2000
+  },
+  {
+    "month": "Dec",
+    "amount": 2800
+  }
+]
