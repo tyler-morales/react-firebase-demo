@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { balanceCollection } from '../firebase'
 // import loadData from '../data/load-data'
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   Legend,
+  Tooltip,
   ResponsiveContainer,
 } from 'recharts'
 
@@ -52,7 +52,7 @@ function FirebaseDemo() {
     <div class="h-80">
       <h1 class="my-4 text-3xl text-white">🔥 Firebase</h1>
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart
+        <AreaChart
           width={500}
           height={500}
           data={sorted}
@@ -63,13 +63,24 @@ function FirebaseDemo() {
             bottom: 5,
           }}
         >
+          <defs>
+            <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#34D399" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#34D399" stopOpacity={0} />
+            </linearGradient>
+          </defs>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="amount" stroke="#82ca9d" />
-        </LineChart>
+          <Area
+            type="monotone"
+            dataKey="amount"
+            stroke="#34D399"
+            fill="url(#colorBalance)"
+          />
+        </AreaChart>
       </ResponsiveContainer>
 
       <div class="flex gap-6 justify-center mt-4">
