@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import PageFooter from './common/page-footer'
 import PageHeader from './common/page-header'
 import FirebaseDemo from './pages/firebase-demo'
-// import firebase from './firebase'
 
 function App() {
   return (
