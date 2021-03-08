@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { balanceCollection } from '../firebase'
-// import loadData from '../data/load-data'
+import loadData from '../data/load-data'
 import {
   AreaChart,
   Area,
@@ -87,7 +87,10 @@ function FirebaseDemo() {
         <button class="p-2 rounded-md border-2 border-blue-400 text-blue-400 w-48">
           Add May's Balance
         </button>
-        <button class="p-2 rounded-md border-2 border-blue-400 text-blue-400 w-48">
+        <button
+          onClick={loadData}
+          class="p-2 rounded-md border-2 border-blue-400 text-blue-400 w-48"
+        >
           Load Data
         </button>
       </div>
