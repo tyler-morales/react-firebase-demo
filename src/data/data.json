@@ -1,49 +1,61 @@
 [
   {
+    "index": 0,
     "month": "Jan",
     "amount": 500
   },
   {
+    "index": 1,
     "month": "Feb",
     "amount": 800
   },
   {
+    "index": 2,
     "month": "Mar",
     "amount": 1000
   },
   {
+    "index": 3,
     "month": "Apr",
     "amount": 900
   },
   {
+    "index": 4,
     "month": "May",
     "amount": 1200
   },
   {
+    "index": 5,
     "month": "Jun",
     "amount": 1700
   },
   {
+    "index": 6,
     "month": "Jul",
     "amount": 2000
   },
   {
+    "index": 7,
     "month": "Aug",
     "amount": 1400
   },
   {
+    "index": 8,
     "month": "Sep",
     "amount": 1850
   },
   {
+    "index": 9,
     "month": "Oct",
     "amount": 2200
   },
   {
+    "index": 10,
     "month": "Nov",
     "amount": 2000
   },
   {
+    "index": 11,
     "month": "Dec",
     "amount": 2800
   }
