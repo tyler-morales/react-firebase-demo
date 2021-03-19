@@ -8,11 +8,17 @@ import {
 } from './balanceSlice'
 
 function Balance() {
+  // use local storage for balance
+  // let totalBalance = localStorage.getItem('amount') || 0
   const balance = useSelector(selectBalance)
   const dispatch = useDispatch()
   const [incrementAmount, setincrementAmount] = useState(500)
-  console.log(typeof incrementAmount)
 
+  const updateText = () => {
+    return incrementAmount > 0
+      ? '💰 Add to Balance'
+      : '🚰  Subtract from Balance'
+  }
   return (
     <>
       <span class="text-white text-6xl">${balance}</span>
@@ -30,18 +36,22 @@ function Balance() {
           Quick Withdrawl $100
         </button>
       </div>
-      <div>
+      <div class="flex gap-4 justify-center items-center text-center m-auto">
         <input
-          class="p-2 rounded-md w-full"
+          class="p-2 rounded-md w-36 text-2xl"
           type="number"
           value={incrementAmount}
           onChange={(e) => setincrementAmount(e.target.value)}
         />
         <button
-          class="text-white"
+          className={
+            incrementAmount > 0
+              ? 'text-white border-2 border-green-500 p-3 rounded-md w-1/2 bg-green-600'
+              : 'text-white border-2 border-red-500 p-3 rounded-md w-1/2 bg-red-600'
+          }
           onClick={() => dispatch(incrementByAmount(+incrementAmount || 0))}
         >
-          💰 Add to Balance
+          {updateText()}
         </button>
       </div>
     </>
