@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import PageFooter from './common/page-footer'
 import PageHeader from './common/page-header'
 import FirebaseDemo from './pages/firebase-demo'
+import StateManagement from './pages/state-management'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route path="/firebase" exact>
             <FirebaseDemo />
+          </Route>
+          <Route path="/state" exact>
+            <StateManagement />
           </Route>
         </Switch>
 

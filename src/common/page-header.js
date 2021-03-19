@@ -10,14 +10,14 @@ function PageHeader() {
       <nav class="text-blue-300 text-lg mt-4">
         <Link to="/firebase" class="px-2">
           🔥 Firebase
-        </Link>{' '}
+        </Link>
         |
         <Link to="/testing" class="px-2">
           🃏 Testing
-        </Link>{' '}
+        </Link>
         |
         <Link to="/state" class="px-2">
-          🪐 State Management{' '}
+          🪐 State Management
         </Link>
       </nav>
     </div>
